@@ -12,7 +12,7 @@ CREATE TABLE dbo.users(
     depnum INT NOT NULL,
     deleted NUMBER(1) NOT NULL DEFAULT 0
 );
-
+[rs1, rs2, rs3]
 INSERT INTO dbo.users(emplid, fullname, fname, lname, status, position, ssn, eligible, title, dept, depnum, deleted)
 VALUES (1, 'John Doe', 'John', 'Doe', 1, 'Nurse', 123456789, 1, 'RN', 'Nursing', 10, 0);
 
@@ -94,4 +94,6 @@ VALUES (26, 'Emily Wilson', 'Emily', 'Wilson', 1, 'Surgeon', 678901234, 1, 'MD',
 INSERT INTO dbo.users(emplid, fullname, fname, lname, status, position, ssn, eligible, title, dept, depnum, deleted)
 VALUES (27, 'John Lee', 'John', 'Lee', 1, 'Urologist', 789012345, 1, 'MD', 'Urology', 240, 1);
 
+
+SELECT * FROM [].[] WHERE eligible = '1' AND deleted = '0'
 

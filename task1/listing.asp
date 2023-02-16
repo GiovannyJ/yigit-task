@@ -10,9 +10,10 @@
     If Request.ServerVariables("REQUEST_METHOD") = "POST" THEN
 
         If Request.querystring("action") = "search" THEN
-            eligible = request("eligible")
+            ELGIBLE = request("eligible")
         End If
     End If
+
     
     %>
     <body>
@@ -43,8 +44,8 @@
                     <div class="row">
                         <div class="col-md-4">
                             <select class="form-control" id="eligible" name="eligible">
-                                <option value="0" <%if eligible=0 then%> selected <%end if%>> Non-Eliglible</option>
-                                <option value="1" <%if eligible=1 then%> selected <%end if%>> Eliglible</option>
+                                <option value="0" <%if ELGIBLE=0 then%> selected <%end if%>> Non-Eliglible</option>
+                                <option value="1" <%if ELGIBLE=1 then%> selected <%end if%>> Eliglible</option>
                             </select>
                         </div>
                         <div class="col-md-4">
@@ -53,10 +54,10 @@
                     </div>
                 </form>
             </div>
-            <%if eligible = 0 then%>
+            <%if ELGIBLE = 0 then%>
             <div class="tab-pane active" id="tab1helloWorld">
                 <%
-                    strsql = getEilgible()
+                    strsql = getEligible()
                     set rs = scn.execute(strsql)
                 %>
             <div class="col-md-12" style="overflow: auto;" id="tablewrapper">
@@ -64,7 +65,7 @@
                     <thead>
                         <tr>
                             
-                            <th style="vertical-align: text-top;"></th>
+                            <th style="vertical-align: text-top;">emplid</th>
                             <th style="vertical-align: text-top;"></th>
                             <th style="vertical-align: text-top;"></th>
                             <th style="vertical-align: text-top;"></th>

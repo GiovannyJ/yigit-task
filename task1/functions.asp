@@ -6,3 +6,4 @@ Function getRecordByName(name)
     getRecordByName = strsql
     
 End Function
+
